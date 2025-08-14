@@ -23,7 +23,7 @@ This project provisions AWS S3 buckets and demonstrates how to manage cloud reso
 1. Clone this repository
 2. Configure your AWS credentials
 3. Run `terraform init` to initialize the project
-4. Run `terraform plan` to see the execution plan
+4. Run `terraform plan` to execute the plan
 5. Run `terraform apply -auto-approve` to provision resources without manual approval
 
 ### Destroying Resources
@@ -36,11 +36,12 @@ For details on the AWS S3 bucket resource, see the official Terraform documentat
 [Terraform AWS S3 Bucket Resource](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket)
 
 ## Project Files
+
 The following files were manually created and edited:
 - `error.html`: Custom error page for S3 website hosting
 - `index.html`: Main landing page for the S3-hosted site
 - `main.tf`: Main Terraform configuration for AWS resources
-- `outputs.tf`: Defines and outputs key Terraform values
+- `outputs.tf`: Defines output values (such as the S3 website endpoint) that are displayed after running `terraform apply`. If you do not use this file, Terraform will still create your resources, but you will not automatically see important information (like the website URL) in your terminal output—you would need to look it up manually in AWS.
 - `provider.tf`: Specifies the AWS provider configuration
 - `variables.tf`: Declares input variables for Terraform
 - `profile.jpg`: Example image file used in the S3 bucket
