@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naimur's Portfolio</title>
+    <style>
+        /* Basic Styles */
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        
+        header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: #575757;
+        }
+        /* Main content section */
+        
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .projects,
+        .reviews {
+            margin: 40px 0;
+        }
+        /* Project Section */
+        
+        .project-card {
+            display: inline-block;
+            width: 45%;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .project-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        .project-card h3 {
+            margin: 15px 0;
+        }
+        
+        .project-card p {
+            font-size: 1em;
+            color: #666;
+        }
+        
+        .project-card .project-icon {
+            margin-right: 10px;
+            font-size: 1.3em;
+            color: #333;
+        }
+        /* Reviews Section */
+        
+        .review {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .review:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .review .author {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .review .comment {
+            font-size: 1em;
+            color: #444;
+        }
+        /* Footer */
+        
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        /* Animations */
+        
+        .fadeIn {
+            animation: fadeIn 2s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Naimur's Portfolio</h1>
+        <!-- Profile Image from S3 Bucket -->
+        <img src="https://terraformprojectawss3dssnp.s3.us-east-1.amazonaws.com/profile.jpg" alt="Profile Image">
+        <nav>
+            <a href="#projects">Projects</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="content">
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects fadeIn">
+            <h2>My Projects</h2>
+            <div class="project-card">
+                <i class="project-icon">✏️</i>
+                <h3>Project 1: E-commerce Website</h3>
+                <p>Built a fully functional e-commerce platform with Node.js, Express, and MongoDB. Implemented payment gateway integration and real-time inventory updates.</p>
+            </div>
+            <div class="project-card">
+                <i class="project-icon">📖</i>
+                <h3>Project 2: Personal Blog</h3>
+                <p>Developed a personal blog site using Node.js and MongoDB, featuring user authentication, post creation, and comment functionality.</p>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="reviews fadeIn">
+            <h2>What People Are Saying</h2>
+            <div class="review">
+                <p class="author">John Doe</p>
+                <p class="comment">"Naimur's project on e-commerce development was impressive. His ability to solve problems and deliver a seamless user experience was exceptional!"</p>
+            </div>
+            <div class="review">
+                <p class="author">Jane Smith</p>
+                <p class="comment">"Working with Naimur on his personal blog project was a pleasure. His attention to detail and ability to adapt to new technologies made him an asset to the team."</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: naimur@example.com</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Naimur's Portfolio. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
