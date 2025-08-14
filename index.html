@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naimur's Portfolio</title>
+    <title>Naimur Rahman's Portfolio</title>
     <style>
         /* Basic Styles */
         
@@ -17,9 +17,9 @@
         }
         
         header {
-            background-color: #333;
+            background-color: #2C3E50;
             color: white;
-            padding: 20px;
+            padding: 30px;
             text-align: center;
             position: sticky;
             top: 0;
@@ -32,8 +32,8 @@
         }
         
         header img {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             margin-top: 20px;
         }
@@ -54,7 +54,7 @@
         }
         
         nav a:hover {
-            background-color: #575757;
+            background-color: #34495E;
         }
         /* Main content section */
         
@@ -63,9 +63,14 @@
             text-align: center;
         }
         
-        .projects,
-        .reviews {
+        .section {
             margin: 40px 0;
+        }
+        
+        .section h2 {
+            font-size: 2em;
+            color: #2C3E50;
+            margin-bottom: 20px;
         }
         /* Project Section */
         
@@ -99,12 +104,6 @@
             font-size: 1em;
             color: #666;
         }
-        
-        .project-card .project-icon {
-            margin-right: 10px;
-            font-size: 1.3em;
-            color: #333;
-        }
         /* Reviews Section */
         
         .review {
@@ -133,7 +132,7 @@
         /* Footer */
         
         footer {
-            background-color: #333;
+            background-color: #2C3E50;
             color: white;
             padding: 15px;
             text-align: center;
@@ -152,16 +151,49 @@
                 opacity: 1;
             }
         }
+        /* Contact Form */
+        
+        .contact-form {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #2C3E50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .contact-form button:hover {
+            background-color: #34495E;
+        }
     </style>
 </head>
 
 <body>
 
     <header>
-        <h1>Naimur's Portfolio</h1>
+        <h1>Naimur Rahman's Portfolio</h1>
         <!-- Profile Image from S3 Bucket -->
         <img src="https://terraformprojectawss3dssnp.s3.us-east-1.amazonaws.com/profile.jpg" alt="Profile Image">
         <nav>
+            <a href="#education">Education</a>
+            <a href="#work">Work Experience</a>
             <a href="#projects">Projects</a>
             <a href="#reviews">Reviews</a>
             <a href="#contact">Contact</a>
@@ -170,18 +202,42 @@
 
     <div class="content">
 
+        <!-- Education Section -->
+        <section id="education" class="section fadeIn">
+            <h2>Education</h2>
+            <p><strong>M.Sc. in Data-intensive Intelligent Software Systems</strong> - Erasmus Mundus Double Degree scholarship (€49,000), Mälardalen University, Sweden & Åbo Akademi, Finland (Sep 2023 – Present)</p>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section id="work" class="section fadeIn">
+            <h2>Work Experience</h2>
+            <div class="project-card">
+                <h3>EcoPhi - Industrial Thesis (Jan 2025 – Present)</h3>
+                <p>Created a custom UNet-based partial discharge segmentation model, deployed Dockerized MLOps workflow in Kubernetes.</p>
+            </div>
+            <div class="project-card">
+                <h3>ABB - Summer Work (Jun 2024 – Oct 2024)</h3>
+                <p>Designed computer vision and sensor fusion systems for port automation, reducing reprojection error by 15% over baseline.</p>
+            </div>
+        </section>
+
         <!-- Projects Section -->
         <section id="projects" class="projects fadeIn">
             <h2>My Projects</h2>
             <div class="project-card">
                 <i class="project-icon">✏️</i>
-                <h3>Project 1: E-commerce Website</h3>
-                <p>Built a fully functional e-commerce platform with Node.js, Express, and MongoDB. Implemented payment gateway integration and real-time inventory updates.</p>
+                <h3>Vision Transformer-based Medical Report Generation</h3>
+                <p>Built a multimodal system combining Vision Transformer and GPT-2 (LLM) for generating radiology reports. Leveraged PyTorch and OpenCV for image analysis and text generation.</p>
             </div>
             <div class="project-card">
-                <i class="project-icon">📖</i>
-                <h3>Project 2: Personal Blog</h3>
-                <p>Developed a personal blog site using Node.js and MongoDB, featuring user authentication, post creation, and comment functionality.</p>
+                <i class="project-icon">📊</i>
+                <h3>Water Resource ETL Pipeline</h3>
+                <p>Developed Python-based ETL scripts to extract, clean, and transform water resource data from CSV files using pandas for downstream analytics.</p>
+            </div>
+            <div class="project-card">
+                <i class="project-icon">🎮</i>
+                <h3>Pong Reinforcement Learning Agent</h3>
+                <p>Developed a reinforcement learning agent to play the classic Pong game using Q-learning. Utilized OpenAI Gym for simulation, and TensorFlow for training the agent.</p>
             </div>
         </section>
 
@@ -190,24 +246,33 @@
             <h2>What People Are Saying</h2>
             <div class="review">
                 <p class="author">John Doe</p>
-                <p class="comment">"Naimur's project on e-commerce development was impressive. His ability to solve problems and deliver a seamless user experience was exceptional!"</p>
+                <p class="comment">"Naimur's project on Vision Transformer-based Medical Report Generation was amazing. His work helped automate the entire report generation process effectively!"</p>
             </div>
             <div class="review">
                 <p class="author">Jane Smith</p>
-                <p class="comment">"Working with Naimur on his personal blog project was a pleasure. His attention to detail and ability to adapt to new technologies made him an asset to the team."</p>
+                <p class="comment">"The Water Resource ETL Pipeline developed by Naimur was highly efficient, saving a lot of time in data processing and transforming data for our team!"</p>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact">
+        <section id="contact" class="section fadeIn">
             <h2>Contact Me</h2>
-            <p>Email: naimur@example.com</p>
-        </section>
+            <p>Email: naimur978@gmail.com</p>
+
+            <div class="contact-form">
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>a
 
     </div>
 
     <footer>
-        <p>&copy; 2025 Naimur's Portfolio. All rights reserved.</p>
+        <p>&copy; 2025 Naimur Rahman's Portfolio. All rights reserved.</p>
     </footer>
 
 </body>

@@ -20,10 +20,12 @@ This project provisions AWS S3 buckets and demonstrates how to manage cloud reso
 - Internet access to reach AWS services
 
 ## How to Use
+**Note:** Terraform is a declarative tool, not imperative. This means you describe your desired end state in configuration files, and Terraform determines the actions needed to achieve that state. You do not specify step-by-step instructions; instead, you provide the expected output directly and Terraform handles the process.
 1. Clone this repository
 2. Configure your AWS credentials
 3. Run `terraform init` to initialize the project
-4. Run `terraform plan` to execute the plan
+4. Run `terraform plan` to preview the changes that Terraform will make to your infrastructure before applying them. 
+Terraform uses two input sources: configuration files and the state file. The core of Terraform compares these two sources to determine what will be created, modified, or destroyed, and presents this information in the plan output. Use it every time before running `terraform apply` to ensure Terraform will only perform the actions you expect. It is especially useful when collaborating with others on the same infrastructure.
 5. Run `terraform apply -auto-approve` to provision resources without manual approval
 
 ### Destroying Resources
